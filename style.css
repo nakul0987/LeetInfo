@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    /* color: rgb(70, 80, 90); */
+    color: #212121;
+    /* color: #4682B4; */
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: start;
+    flex-wrap: wrap;
+    /* padding: 3rem; */
+}
+
+.container{
+    height: 40%;
+    width: 40%;
+    background-color: rgb(211, 211, 211);
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.inputWindow{
+    display: flex;
+    justify-content: space-between;
+}
+
+#inputBox{
+    width: 70%;
+    padding: 0.4rem;
+    border-radius: 0.3rem;
+}
+
+.searchBtn{
+    width: 24%;
+    padding: 0.4rem;
+    border-radius: 0.3rem;
+}
+
+
+.outputWindow{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 1.2rem;
+}
+
+.output{
+    display: flex;
+    gap: 1rem;
+    
+}
+
