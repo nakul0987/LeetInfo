@@ -18,13 +18,10 @@ document.addEventListener('DOMContentLoaded',()=>{
     const totalH=document.querySelector('.totalHard');
 
 
-    searchButton.addEventListener('click',()=>{
-        let username=inputArea.value;
-        const leetCodeUrl=`https://leetcode-stats-api.vercel.app/${username}`;
-        // console.log(username);
+    async function getInfo() {
+            let username=inputArea.value;
 
-        async function getInfo() {
-
+            const leetCodeUrl=`https://leetcode-stats-api.vercel.app/${username}`;
             const res=await fetch(leetCodeUrl);
             const data=await res.json();
             console.log(data);
@@ -44,10 +41,38 @@ document.addEventListener('DOMContentLoaded',()=>{
             hSolved.innerHTML=data.hardSolved;
             totalH.innerHTML=data.totalHard;
 
-        }
+    }
 
-        if(username===""){
-            alert("Invalid Username");
+
+    searchButton.addEventListener('click',()=>{
+        // const leetCodeUrl=`https://leetcode-stats-api.vercel.app/${username}`;
+        // console.log(username);
+
+        // async function getInfo() {
+
+        //     const res=await fetch(leetCodeUrl);
+        //     const data=await res.json();
+        //     console.log(data);
+
+        //     rankRate.innerHTML=data.ranking;
+
+        //     totalSolved.innerHTML=data.totalSolved;
+        //     totalQues.innerHTML=data.totalQuestions;
+
+        //     eSolved.innerHTML=data.easySolved;
+        //     totalE.innerHTML=data.totalEasy;
+
+        //     mSolved.innerHTML=data.mediumSolved;
+        //     totalM.innerHTML=data.totalMedium;
+
+
+        //     hSolved.innerHTML=data.hardSolved;
+        //     totalH.innerHTML=data.totalHard;
+
+        // }
+
+        if(inputArea.value.trim()===''){
+            alert('Fill the username');
         }
         else{
             getInfo();
