@@ -15,7 +15,7 @@
             <input type="text" name="username" placeholder="Username" id="inputBox" required>
             <button class="searchBtn">Search</button>
         </div>
-        <div class="outputWindow">
+        <!-- <div class="outputWindow">
             <div class="easy output">
                 <p class="easyTitle">Easy: </p>
                 <p class="easySolved"></p>
@@ -28,7 +28,35 @@
                 <p class="hardTitle">Hard: </p>
                 <p class="hardSolved"></p>
             </div>
+        </div> -->
+
+        <div class="outputWindow">
+            <table border="1">
+                <tr class="tableHeadings">
+                    <th>Rank</th>
+                    <td>Total Solved</td>
+                    <td>Total Questions</td>
+                    <td>Easy Solved</td>
+                    <td>Total Easy</td>
+                    <td>Medium Solved</td>
+                    <td>Total Medium</td>
+                    <td>Hard Solved</td>
+                    <td>Total Hard</td>
+                </tr>
+                <tr>
+                    <th class="rankRate"></th>
+                    <td class="totalSolved"></td>
+                    <td class="totalQues"></td>
+                    <td class="easySolved"></td>
+                    <td class="totalEasy"></td>
+                    <td class="mediumSolved"></td>
+                    <td class="totalMedium"></td>
+                    <td class="hardSolved"></td>
+                    <td class="totalHard"></td>
+                </tr>
+            </table>
         </div>
+
     </div>
 
     <script src="app.js"></script>
